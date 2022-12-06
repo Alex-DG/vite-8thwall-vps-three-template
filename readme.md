@@ -4,7 +4,10 @@
 
 - Minimal reusable template project: AR 8thwall { VPS } and Three.js made with Vite.js
 
-![vps_spot_found](https://user-images.githubusercontent.com/4311684/205789416-99153981-ed28-4b9b-a088-9edcfdd6e296.png=250x250)
+<div style="width:250px ; height:350px">
+    ![vps_spot_found](https://user-images.githubusercontent.com/4311684/205789416-99153981-ed28-4b9b-a088-9edcfdd6e296.png)
+</div>
+
 
 
 ## Setup
