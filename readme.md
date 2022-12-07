@@ -11,7 +11,9 @@
 
 ## Setup
 
-Run the following commands:
+(1) In `index.html` use your 8thWall project Id.
+
+(2) Run the following commands:
 
 ```bash
 # Install dependencies (only the first time)
