@@ -4,7 +4,7 @@ export const initXRScenePipelineModule = () => {
   }
 
   return {
-    name: 'xrscene',
+    name: 'customxrscene',
 
     onStart: ({ canvas }) => {
       const { scene, camera, renderer } = XR8.Threejs.xrScene() // Get the 3js scene from XR8.Threejs
