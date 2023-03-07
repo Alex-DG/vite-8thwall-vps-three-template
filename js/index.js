@@ -25,7 +25,7 @@ const onxrloaded = () => {
   // Initalised custom pipelines
   const xrScenePipeline = initXRScenePipelineModule()
   const worldPipeline = initWorldPipelineModule()
-  const VPSPipeline = initVPSPipelineModule()
+  const vpsPipeline = initVPSPipelineModule()
 
   XR8.XrController.configure({
     enableVps: true,
@@ -47,7 +47,7 @@ const onxrloaded = () => {
 
     xrScenePipeline,
     worldPipeline,
-    VPSPipeline,
+    vpsPipeline,
   ])
 
   XR8.run({ canvas: document.getElementById('experience') })

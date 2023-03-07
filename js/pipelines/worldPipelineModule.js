@@ -8,6 +8,8 @@ export const initWorldPipelineModule = () => {
     const { scene } = XR8.Threejs.xrScene()
 
     Lights.init({ scene })
+
+    console.log('✨', 'World ready!')
   }
 
   const update = () => {}
