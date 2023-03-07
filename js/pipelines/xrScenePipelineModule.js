@@ -1,5 +1,4 @@
 export const initXRScenePipelineModule = () => {
-  // Populates a cube into an XR scene and sets the initial camera position.
   const initXrScene = ({ camera }) => {
     camera.position.set(0, 3, 0)
   }
