@@ -4,13 +4,12 @@ export const initXRScenePipelineModule = () => {
   }
 
   return {
-    name: 'init-xr-scene',
+    name: 'xrscene',
 
-    // onStart is called once when the camera feed begins. In this case, we need to wait for the
     onStart: ({ canvas }) => {
       const { scene, camera, renderer } = XR8.Threejs.xrScene() // Get the 3js scene from XR8.Threejs
 
-      initXrScene({ scene, camera, renderer }) // Add objects set the starting camera position.
+      initXrScene({ scene, camera, renderer })
 
       // prevent scroll/pinch gestures on canvas
       canvas.addEventListener('touchmove', (event) => {
