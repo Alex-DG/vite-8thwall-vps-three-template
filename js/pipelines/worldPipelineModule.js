@@ -15,7 +15,7 @@ export const initWorldPipelineModule = () => {
   const update = () => {}
 
   return {
-    name: 'init-world',
+    name: 'world',
 
     onStart: () => init(),
 
