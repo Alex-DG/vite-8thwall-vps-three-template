@@ -1,4 +1,4 @@
-import Lights from '../experience/Lights'
+import Lights from '../classes/Lights'
 
 /**
  * Initialise 3D world content
