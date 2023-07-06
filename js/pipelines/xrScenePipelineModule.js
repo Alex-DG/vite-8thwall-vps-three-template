@@ -1,8 +1,18 @@
 import VConsole from 'vconsole' // debug console
 
-const DEBUG_CONSOLE = true
+const isDebug = () => {
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const debug = urlParams.get('debug')
+  if (debug && debug === 'true') {
+    return true
+  }
+  return false
+}
 
-export const initXRScenePipelineModule = (isDebugConsole = DEBUG_CONSOLE) => {
+export const initXRScenePipelineModule = () => {
+  const enableConsole = isDebug()
+
   let vConsole = null
 
   const initXrScene = ({ camera }) => {
@@ -13,7 +23,7 @@ export const initXRScenePipelineModule = (isDebugConsole = DEBUG_CONSOLE) => {
     name: 'customxrscene',
 
     onAttach: () => {
-      if (isDebugConsole) vConsole = new VConsole({ theme: 'dark' })
+      if (enableConsole) vConsole = new VConsole({ theme: 'dark' })
     },
 
     onStart: ({ canvas }) => {
