@@ -1,10 +1,20 @@
-export const initXRScenePipelineModule = () => {
+import VConsole from 'vconsole' // debug console
+
+const DEBUG_CONSOLE = true
+
+export const initXRScenePipelineModule = (isDebugConsole = DEBUG_CONSOLE) => {
+  let vConsole = null
+
   const initXrScene = ({ camera }) => {
     camera.position.set(0, 3, 0)
   }
 
   return {
     name: 'customxrscene',
+
+    onAttach: () => {
+      if (isDebugConsole) vConsole = new VConsole({ theme: 'dark' })
+    },
 
     onStart: ({ canvas }) => {
       const { scene, camera, renderer } = XR8.Threejs.xrScene() // Get the 3js scene from XR8.Threejs
@@ -23,6 +33,8 @@ export const initXRScenePipelineModule = () => {
       })
     },
 
-    xrScene: () => xrScene,
+    onDetach: () => {
+      vConsole?.destroy()
+    },
   }
 }

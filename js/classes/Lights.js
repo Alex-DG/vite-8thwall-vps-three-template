@@ -7,8 +7,9 @@ class _Lights {
     this.scene.add(directionalLight)
   }
 
-  init(options) {
-    this.scene = options.scene
+  init() {
+    const { scene } = XR8.Threejs.xrScene()
+    this.scene = scene
     this.setLights()
   }
 }

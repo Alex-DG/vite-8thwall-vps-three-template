@@ -15,7 +15,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -25,4 +24,57 @@
 body {
   width: 100%;
   height: 100%;
+}
+
+/** UI **/
+
+#recenter-btn {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  outline: none;
+  background: transparent;
+  border: none;
+  margin: 0.8rem;
+
+  border: 4px solid white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#recenter-btn > img {
+  width: 3rem;
+  height: auto;
+}
+.active-btn {
+  border-color: rgb(230, 231, 232) !important;
+}
+
+#scanning-vps-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+}
+#scanning-vps-container > span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
 }

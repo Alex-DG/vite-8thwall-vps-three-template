@@ -1,3 +1,4 @@
+import Layout from '../classes/Layout'
 import Lights from '../classes/Lights'
 
 /**
@@ -5,9 +6,8 @@ import Lights from '../classes/Lights'
  */
 export const initWorldPipelineModule = () => {
   const init = () => {
-    const { scene } = XR8.Threejs.xrScene()
-
-    Lights.init({ scene })
+    Layout.init()
+    Lights.init()
 
     console.log('✨', 'World ready!')
   }

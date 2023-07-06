@@ -29,6 +29,7 @@ const onxrloaded = () => {
 
   XR8.XrController.configure({
     enableVps: true,
+    projectWayspots: [],
   })
 
   XR8.addCameraPipelineModules([
