@@ -75,12 +75,27 @@ export const initVPSPipelineModule = () => {
     return bufferGeometry
   }
 
+  const defineWayspotPrivacy = (id) => {
+    if (nearbyWayspots_?.length > 0) {
+      const wayspot = nearbyWayspots_.find(
+        (nearbyWayspot) => nearbyWayspot.id === id
+      )
+
+      if (wayspot) {
+        console.log('[PUBLIC] Wayspot -> ', { wayspot })
+      } else {
+        console.log('[PRIVATE] Wayspot')
+      }
+    }
+  }
+
   const handleMeshFound = ({ detail }) => {
     console.log('📍', 'Mesh -> FOUND ', { detail })
 
     const { scene } = XR8.Threejs.xrScene()
 
     const { geometry, position, rotation, id } = detail
+    defineWayspotPrivacy(id)
 
     const material = new THREE.MeshStandardMaterial({
       color: 0x00ffff,
